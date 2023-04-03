@@ -17,7 +17,32 @@ class Magazine
       puts magazine.name
     end
   end
-end
+
+  def find_by_name(name)
+    self.all.find_all do |magazine_name| 
+    self.magazine_name.name == name
+    end
+  end
+
+  def article_titles
+    article_titles = []
+    Article.all.select do |article|
+     if article.magazine.title == self
+      article_titles << article.title
+     end 
+    end
+  end 
+
+  def contributing_authors
+    contributing_authors = []
+   Article.all.select do |article|
+    if article.magazine.name == self
+    contributing_authors << article.author
+    end 
+   end
+  end
+
+end 
 
 puts
 puts "MAGAZINE CONSOLE"

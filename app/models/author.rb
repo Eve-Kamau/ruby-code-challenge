@@ -1,8 +1,7 @@
-
 class Author
   attr_reader :name
 
-  def initialize(name)
+  def initialize(name="Ava")
     @name = name
   end
 
@@ -17,6 +16,32 @@ class Author
     Article.all.select do |article|
     if article.author == self
       magazines << article.magazine
+    end 
+   end
+  end
+
+  def contributors
+    contributors = []
+    Article.all.select do |article|
+    if article.author == self
+      contributors << article.magazine
+   end 
+  end
+  end
+
+  def add_article(magazine, title)
+    Article.new(author: self, magazine: magazine, title: title)
+  end
+
+  def topic_areas
+    topic_areas = []
+    Article.all.select do |article|
+    if article.author == self
+      topic_areas << article.magazine.category
+   end 
+  end
+end 
+
 end 
 
 puts "AUTHOR CONSOLE"

@@ -26,7 +26,8 @@ class Article
   def magazine
     @magazine
    end 
-end
+
+  end
 
 puts
 puts "ARTICLE CONSOLE"
