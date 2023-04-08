@@ -29,15 +29,3 @@ class Article
 
   end
 
-# puts
-# puts "ARTICLE CONSOLE"
-# glory = Article.new
-# puts glory.title 
-# puts glory.author
-# puts glory.magazine 
-
-# charisma = Article.new("Charisma")
-# wired = Article.new("Wired")
-
-# puts Article.all
-
