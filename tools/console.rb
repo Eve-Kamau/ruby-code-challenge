@@ -4,7 +4,6 @@ def reload
   load 'config/environment.rb'
 end
 
-
 ###  WRITE YOUR TEST CODE HERE ###
 author1 = Author.new("Eric")
 author2 = Author.new("Maggie")

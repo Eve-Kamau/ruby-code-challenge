@@ -18,6 +18,7 @@ class Author
       magazines << article.magazine
     end 
    end
+   magazines.uniq
   end
 
   def contributors
