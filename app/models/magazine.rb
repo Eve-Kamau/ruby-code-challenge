@@ -1,5 +1,6 @@
 class Magazine
   @@all = []
+
   attr_accessor :name, :category
 
   def initialize(name, category)
@@ -25,25 +26,34 @@ end
   def article_titles
     article_titles = []
     Article.all.select do |article|
-     if article.magazine.title == self
+     if article.magazine == self
       article_titles << article.title
      end 
     end
     article_titles
   end 
 
+  def contributors
+    contributors = []
+    Article.all.select do |article|
+    if article.magazine == self
+      contributors << article.author
+   end 
+  end
+  contributors.uniq
+  end
+
   def contributing_authors
     Article
     .all
     .select { |article| article.magazine == self }
-    .map { |article| article.author.name }
+    .map { |article| article.author }
     .tally
     .select { |key, value| value > 2 }
     .keys
   end
   
 end 
-
 
 
   #   contributing_authors = []

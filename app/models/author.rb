@@ -21,15 +21,6 @@ class Author
    magazines.uniq
    end
 
-  def contributors
-    contributors = []
-    Article.all.select do |article|
-    if article.author == self
-      contributors << article.magazine
-   end 
-  end
-  end
-
   def add_article(magazine, title)
     Article.new(self, magazine, title)
   end
