@@ -38,10 +38,11 @@ end
     .select { |article| article.magazine == self }
     .map { |article| article.author.name }
     .tally
-    .select { |key, value| value > 2 
+    .select { |key, value| value > 2 }
     .keys
-   end
-  end 
+  end
+  
+end 
 
 
 
