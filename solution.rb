@@ -1,4 +1,5 @@
 # Please copy/paste all three classes into this file to submit your solution!
+
 require 'pry'
 
 class Author
@@ -46,6 +47,8 @@ class Author
 end 
 
 end 
+
+binding.pry
 
 #------------------------------------------------------------
 
@@ -127,25 +130,7 @@ class Article
 
     end
 
-puts Author 
-puts author1 = Author.new("Eric")
-puts author2 = Author.new("Maggie")
-puts author3 = Author.new("Adam")
-puts 
 
-puts Article
-puts article1 = Article.new("Simon", "Glory News", "The Reason")
-puts article2 = Article.new("Edna","Charisma","Experimental Faith")
-puts article3 = Article.new("Xiao", "Wired", "Apple Redefined")
-puts
-
-puts Magazine
-puts mag1 = Magazine.new("Daily Tech News","Technology")
-puts mag2 = Magazine.new("Farmer News","Agriculture")
-puts mag3 = Magazine.new("Christianity", "Religion")
-puts 
-
-puts Article.all
 
 #------------------------------------------------------------
 

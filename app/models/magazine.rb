@@ -44,20 +44,20 @@ class Magazine
 
 end 
 
-puts
-puts "MAGAZINE CONSOLE"
-digest = Magazine.new("Readers Digest", "News")
-puts digest.name
-puts digest.category
+# puts
+# puts "MAGAZINE CONSOLE"
+# digest = Magazine.new("Readers Digest", "News")
+# puts digest.name
+# puts digest.category
 
-upishi = Magazine.new("Upishi Bora", "Cooking")
-puts upishi.name
-puts upishi.category
+# upishi = Magazine.new("Upishi Bora", "Cooking")
+# puts upishi.name
+# puts upishi.category
 
-harvard = Magazine.new("Harvard Magazine", "Educational")
-charisma = Magazine.new("Charisma Magazine", "Religion")
-wired = Magazine.new("Wired", "Tech")
+# harvard = Magazine.new("Harvard Magazine", "Educational")
+# charisma = Magazine.new("Charisma Magazine", "Religion")
+# wired = Magazine.new("Wired", "Tech")
 
-puts Magazine.all
+# puts Magazine.all
 #------------------------------------------------------------
 

@@ -44,9 +44,9 @@ end
 
 end 
 
-puts "AUTHOR CONSOLE"
-mike = Author.new
-puts mike.name
-agatha = Author.new("Agatha")
-puts agatha.name
+# puts "AUTHOR CONSOLE"
+# mike = Author.new
+# puts mike.name
+# agatha = Author.new("Agatha")
+# puts agatha.name
 #------------------------------------------------------------
