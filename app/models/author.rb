@@ -19,7 +19,7 @@ class Author
     end 
    end
    magazines.uniq
-  end
+   end
 
   def contributors
     contributors = []
@@ -31,7 +31,7 @@ class Author
   end
 
   def add_article(magazine, title)
-    Article.new(author: self, magazine: magazine, title: title)
+    Article.new(self, magazine, title)
   end
 
   def topic_areas
@@ -41,13 +41,7 @@ class Author
       topic_areas << article.magazine.category
    end 
   end
-end 
+  topic_areas.uniq
+  end 
 
 end 
-
-# puts "AUTHOR CONSOLE"
-# mike = Author.new
-# puts mike.name
-# agatha = Author.new("Agatha")
-# puts agatha.name
-#------------------------------------------------------------

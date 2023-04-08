@@ -18,11 +18,11 @@ class Magazine
     end
   end
 
-  def find_by_name(name)
-    self.all.find_all do |magazine_name| 
-    self.magazine_name.name == name
-    end
+  def self.find_by_name(name)
+    Magazine.all.find do |magazine|
+      magazine.name == name
   end
+end
 
   def article_titles
     article_titles = []
@@ -35,14 +35,22 @@ class Magazine
   end 
 
   def contributing_authors
-    contributing_authors = []
-   Article.all.select do |article|
-    if article.magazine.name == self
-    contributing_authors << article.author
-    end 
-   end
-  end
+  Article.all.select do |article|
+    article.magazine == self
+  end.map do |article|
+    article.author_name
+  end.tally.select do |key, value|
+    value > 2
+  end.keys
 
 end 
 
 
+  #   contributing_authors = []
+  #  Article.all.select do |article|
+  #   if article.magazine == self
+  #   contributing_authors << article.author
+  #   end 
+  #  end
+  #  contributing_authors.uniq
+  # end
